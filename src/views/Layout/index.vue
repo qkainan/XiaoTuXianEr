@@ -9,5 +9,4 @@ import LayoutFooter from './components/LayoutFooter.vue'
   <RouterView></RouterView>
   <layout-header></layout-header>
   <layout-footer></layout-footer>
-
 </template>
