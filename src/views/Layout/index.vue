@@ -1,7 +1,13 @@
+<script setup>
+import LayoutNav from './components/LayoutNav.vue'
+import LayoutHeader from './components/LayoutHeader.vue'
+import LayoutFooter from './components/LayoutFooter.vue'
+</script>
+
 <template>
-  <div>
-    首页
-    <!-- 二级路由出口   -->
-    <RouterView></RouterView>
-  </div>
+  <LayoutNav></LayoutNav>
+  <RouterView></RouterView>
+  <layout-header></layout-header>
+  <layout-footer></layout-footer>
+
 </template>

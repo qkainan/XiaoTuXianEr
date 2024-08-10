@@ -1,18 +1,15 @@
 <script setup>
 
-
-
 </script>
 
-
 <template>
-  <!--一级路由出口-->
-  <RouterView></RouterView>
+  <!-- 一级路由出口组件 -->
+  <RouterView />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
- /* line-height: 1.5;
+  line-height: 1.5;
   max-height: 100vh;
 }
 
@@ -29,7 +26,7 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: var(&#45;&#45;color-text);
+  color: var(--color-text);
 }
 
 nav a.router-link-exact-active:hover {
@@ -39,7 +36,7 @@ nav a.router-link-exact-active:hover {
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(&#45;&#45;color-border);
+  border-left: 1px solid var(--color-border);
 }
 
 nav a:first-of-type {
@@ -50,7 +47,7 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(&#45;&#45;section-gap) / 2);
+    padding-right: calc(var(--section-gap) / 2);
   }
 
   .logo {
@@ -71,5 +68,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}*/}
+}
 </style>
