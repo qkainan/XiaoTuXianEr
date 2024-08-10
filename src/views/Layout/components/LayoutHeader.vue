@@ -1,5 +1,15 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 
+import { getCategoryAPI } from '@/apis/layout.js'
+
+const categoryList = ref([])
+const getCategory = async () => {
+  const res = await getCategoryAPI();
+  categoryList.value = res.result;
+}
+
+onMounted(() => getCategory());
 </script>
 
 <template>
@@ -9,16 +19,13 @@
         <RouterLink to="/">小兔鲜</RouterLink>
       </h1>
       <ul class="app-header-nav">
-        <li class="home">
-          <RouterLink to="/">首页</RouterLink>
+        <li v-for="item in categoryList" :key="item.id" class="home">
+          <RouterLink to="/">{{ item.name }}</RouterLink>
         </li>
-        <li> <RouterLink to="/">居家</RouterLink> </li>
-        <li> <RouterLink to="/">美食</RouterLink> </li>
-        <li> <RouterLink to="/">服饰</RouterLink> </li>
       </ul>
       <div class="search">
         <i class="iconfont icon-search"></i>
-        <input type="text" placeholder="搜一搜">
+        <input placeholder="搜一搜" type="text">
       </div>
       <!-- 头部购物车 -->
 
@@ -27,7 +34,7 @@
 </template>
 
 
-<style scoped lang='scss'>
+<style lang='scss' scoped>
 .app-header {
   background: #fff;
 
