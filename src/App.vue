@@ -1,24 +1,18 @@
 <script setup>
-/*import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'*/
-import { useCounterStore } from '@/stores/counter.js'
-import { storeToRefs } from 'pinia'
 
-const store = useCounterStore()
-const { count, doubleCount } = storeToRefs(store)
-const { increment } = store
 
 
 </script>
 
 
 <template>
-  <button @click="increment()">{{ count + doubleCount }}</button>
+  <!--一级路由出口-->
+  <RouterView></RouterView>
 </template>
 
-<!--<style scoped>
+<style scoped>
 header {
-  line-height: 1.5;
+ /* line-height: 1.5;
   max-height: 100vh;
 }
 
@@ -77,5 +71,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
-</style>-->
+}*/}
+</style>
